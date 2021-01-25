@@ -73,7 +73,7 @@
 
         if (isset($_GET['inserFail'])) {
             if ($_GET['insertFail'] == 1) {
-                echo '<script type="text/javascript">alert("Error: Cần điền hết vào form")</script>';
+                echo '<script type="text/javascript">alert("Error: need to fill all in the form")</script>';
             } else if ($_GET['insertFail'] == 2 ) {
                 echo '<script type="text/javascript">alert("Error: File is not an image.")</script>';
             } else if ($_GET['insertFail'] == 3 ){
@@ -121,19 +121,19 @@
                     <div class="input__box my-5">
                         <form method="post" action="insert.php" enctype="multipart/form-data">
                             <div class="form-group mb-5">
-                                <label for="name"> Tên sản phẩm : </label>
+                                <label for="name"> Product name : </label>
                                 <input type="text" class="form-control" name="product-name">
                             </div>
                             <div class="form-group mb-5">
-                                <label for="description"> Mô tả sản phẩm : </label>
+                                <label for="description"> Product description : </label>
                                 <input type="text" class="form-control" name="product-description">
                             </div>
                             <div class="form-group mb-5">
-                                <label for="content"> Nội dung sản phẩm: </label>
+                                <label for="content"> Product content : </label>
                                 <input type="text" class="form-control" name="product-content">
                             </div>
                             <div class="form-group mb-5">
-                                <label for="content"> Ảnh sản phẩm: </label>
+                                <label for="content"> Product img : </label>
                                 <input type="file" name="product-img" class="form-control border-0">
                             </div>
                             <div class="form-group mb-5">
@@ -157,14 +157,14 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control" id="tableSort" name="sort">
-                                    <option value="product__name ASC" <?php if($sort == "product__name ASC" ) {echo "selected";} ?>>Thứ tự từ A->Z</option>
-                                    <option value="product__name DESC" <?php if($sort == "product__name DESC" ) {echo "selected";} ?>>Thứ tự từ Z->A</option>
-                                    <option value="id ASC" <?php if($sort == "id ASC" ) {echo "selected";} ?>>Thứ tự ID tăng dần</option>
-                                    <option value="id DESC" <?php if($sort == "id DESC" ) {echo "selected";} ?>>Thứ tự ID nhỏ dần</option>
+                                    <option value="product__name ASC" <?php if($sort == "product__name ASC" ) {echo "selected";} ?>>A->Z</option>
+                                    <option value="product__name DESC" <?php if($sort == "product__name DESC" ) {echo "selected";} ?>>Z->A</option>
+                                    <option value="id ASC" <?php if($sort == "id ASC" ) {echo "selected";} ?>>ID increase</option>
+                                    <option value="id DESC" <?php if($sort == "id DESC" ) {echo "selected";} ?>>ID decrease</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="submit" class="form-control btn btn-primary" value="Tìm" id="searchSubmit">
+                                <input type="submit" class="form-control btn btn-primary" value="Filter" id="searchSubmit">
                             </div>
                         </form>
                         <div id="table-data">
@@ -189,19 +189,19 @@
                         <div class="modal-body">
                             <input type="hidden" class="form-control" name="updateID" id="updateID">
                             <div class="form-group mb-5">
-                                <label for="name"> Tên sản phẩm : </label>
+                                <label for="name"> Product name : </label>
                                 <input type="text" class="form-control" name="updateName" id="updateName">
                             </div>
                             <div class="form-group mb-5">
-                                <label for="description"> Mô tả sản phẩm : </label>
+                                <label for="description"> Product description : </label>
                                 <input type="text" class="form-control" name="updateDescription" id="updateDescription">
                             </div>
                             <div class="form-group mb-5">
-                                <label for="content"> Nội dung sản phẩm: </label>
+                                <label for="content"> Product content : </label>
                                 <input type="text" class="form-control" name="updateContent" id="updateContent">
                             </div>
                             <div class="form-group mb-5">
-                                <label for="content"> Ảnh sản phẩm: </label>
+                                <label for="content"> Product img : </label>
                                 <input type="file" name="updateImg" class="form-control border-0">
                                 <img src="#" alt="" id="updateImg" class="img-fluid">
                             </div>
