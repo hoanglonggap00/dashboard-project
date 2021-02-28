@@ -188,7 +188,7 @@ $deleteTableBody = getPermission($_SESSION['acc_permission'],'deleteUser') ?
 
 $statusTableBody = getPermission($_SESSION['acc_permission'],'updateUserStatus') ?  
                 '<td>'
-                    .'<a href="../user/updateStatusUser.php?id='.$row["id"].'" class="btn btn-primary '.$color.'"> '
+                    .'<a href="../user/updateStatusUser.php'.'?id='.$row["id"].'" class="btn btn-primary '.$color.'"> '
                         .$status
                     .'</a>'
                 .'</td>'  : '';
