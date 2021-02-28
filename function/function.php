@@ -16,13 +16,13 @@ function sentEmail($to,$subject,$body) :int {
     try {
         //Server settings
         $mail->isSMTP();                                            // Send using SMTP
-        $mail->Host       = 'smtp.sendgrid.net';  
+        $mail->Host       = 'smtp.mailtrap.io';  
         $mail->SMTPDebug  = 0;                     // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $mail->Username   = 'apikey';                     // SMTP username
-        $mail->Password   = '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';                               // SMTP password
-        $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->Username   = 'c1c3d4f8c03e95';                     // SMTP username
+        $mail->Password   = 'd924a92b9eee1c';                               // SMTP password
+        $mail->Port       = 2525;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
         $mail->setFrom('admin@gmail.com', 'admin');
