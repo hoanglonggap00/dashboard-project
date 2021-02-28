@@ -2,9 +2,9 @@
     session_start();
 
     // Server variables 
-    $servername = "localhost:3306";
-    $username = "root";
-    $password = "nhatlinh1612";
+    $servername = "sql12.freemysqlhosting.net:3306";
+    $username = "sql12395715";
+    $password = "6Zh3zkSQ3p";
     // Database variables cf
     $db = "myDataBase";
     // Product table variables 
