@@ -13,6 +13,7 @@
     }
 
     $sql = "UPDATE  $MyUsers SET $user__status = '$updateStatus' WHERE $user__id ='$id'";
+    die($sql);
     if ($conn->query($sql) === TRUE) {
         header("location:../main-view/manage-users.php");
     }
