@@ -21,7 +21,7 @@ function sentEmail($to,$subject,$body) :int {
         $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
         $mail->Username   = 'linhcu1612@gmail.com';                     // SMTP username
         $mail->Password   = 'hoanglonggiap00';                               // SMTP password
-        $mail->Port       = 25;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients
         $mail->setFrom('admin@gmail.com', 'admin');
