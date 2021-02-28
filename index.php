@@ -1,7 +1,7 @@
 <?php 
     include './database/connect.php'; 
     if (isset($_SESSION['acc'])) { 
-        header("Location:dashboard.php");
+        header("Location:./resource/view/pages/main-view/dashboard.php");
         exit();                   
     }
 ?>
@@ -27,8 +27,8 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Welcome</h3></div>
                                     <div class="card-body d-flex justify-content-around">
-                                        <a href="../authentication/login.php" class="btn btn-primary">Đăng nhập</a>
-                                        <a href="../authentication/register.php" class="btn btn-primary">Đăng ký</a>
+                                        <a href="./resource/view/pages/authentication/login.php" class="btn btn-primary">Đăng nhập</a>
+                                        <a href="./resource/view/pages/authentication/register.php" class="btn btn-primary">Đăng ký</a>
                                     </div>
                                 </div>
                             </div>
