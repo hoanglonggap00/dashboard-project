@@ -1,5 +1,5 @@
 <?php 
-    include '../../../../database/connect.php'; 
+    include './database/connect.php'; 
     if (isset($_SESSION['acc'])) { 
         header("Location:dashboard.php");
         exit();                   
