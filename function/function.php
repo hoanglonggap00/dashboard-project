@@ -19,8 +19,8 @@ function sentEmail($to,$subject,$body) :int {
         $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
         $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        // $mail->Username   = ;                     // SMTP username
-        // $mail->Password   = ;                               // SMTP password
+        $mail->Username   = 'linhcu1612@gmail.com';                     // SMTP username
+        $mail->Password   = 'hoanglonggiap00';                               // SMTP password
         $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
         //Recipients

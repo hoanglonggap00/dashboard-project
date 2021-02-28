@@ -70,7 +70,10 @@
     if ($conn->query($sql)) {
         $sql = "SELECT $link__tag FROM $MyProductsTagsLink WHERE $link__product='$name'";
         $result = ($conn->query($sql));
-        $currentTag = mysqli_fetch_assoc($result);
+        $currentTag = [];
+        while($row = mysqli_fetch_assoc($result)) {
+            $currentTag[$row['link__tag']] = $row['link__tag'];
+        }
         if (is_array($currentTag) && is_array($_POST['tag'])) {
             foreach($_POST['tag'] as $value){
                 if (!in_array($value,$currentTag)) {

@@ -69,23 +69,26 @@
     if ($conn->query($sql)) {
         $sql = "SELECT $link__tag FROM $MyNewsTagsLink WHERE $link__news='$name'";
         $result = ($conn->query($sql));
-        $currentTag = mysqli_fetch_assoc($result);
+        $currentTag = [];
+        while($row = mysqli_fetch_assoc($result)) {
+            $currentTag[$row['link__tag']] = $row['link__tag'];
+        }
         if (is_array($currentTag) && is_array($_POST['tag'])) {
             foreach($_POST['tag'] as $value){
                 if (!in_array($value,$currentTag)) {
                     $sql = "INSERT INTO $MyNewsTagsLink ($link__news, $link__tag)
-                                     VALUES ('$name', '$value')";
-                             if (!($conn->query($sql))) {
-                                 $addTag = false;
-                            }
+                            VALUES ('$name', '$value')";
+                    if (!($conn->query($sql))) {
+                        $addTag = false;
+                    }
                 }
             }
             foreach($currentTag as $tag){
                 if (!in_array($tag,$_POST['tag'])) {
                     $sql = "DELETE FROM $MyNewsTagsLink WHERE $link__news = '$name' AND $link__tag = '$tag'";
-                             if (!($conn->query($sql))) {
-                                 $addTag = false;
-                            }
+                    if (!($conn->query($sql))) {
+                        $addTag = false;
+                    }
                 }
             }
         } else if (is_array($_POST['tag']) && !is_array($currentTag)){
