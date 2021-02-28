@@ -6,7 +6,7 @@
     $username = "sql12395715";
     $password = "6Zh3zkSQ3p";
     // Database variables cf
-    $db = "myDataBase";
+    $db = "sql12395715";
     // Product table variables 
     $MyProducts = "MyProducts";
     $product__id = "product__id";
